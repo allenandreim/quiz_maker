@@ -31,4 +31,6 @@ def save_question():
         f"Answer) {answer}\n"
         f"---\n"
     )
+    with open("quiz_file_gui.txt", "a") as file:
+        file.write(quiz_entry)
 
