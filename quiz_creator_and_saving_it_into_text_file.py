@@ -34,3 +34,10 @@ def save_question():
     with open("quiz_file_gui.txt", "a") as file:
         file.write(quiz_entry)
 
+    question_entry.delete(0, tk.END)
+    entry_a.delete(0, tk.END)
+    entry_b.delete(0, tk.END)
+    entry_c.delete(0, tk.END)
+    entry_d.delete(0, tk.END)
+    correct_answer.delete(0, tk.END)
+
