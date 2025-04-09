@@ -72,3 +72,5 @@ correct_answer = tk.Entry(root, width=10)
 correct_answer.pack()
 
 tk.Button(root, text="Save Question", command=save_question, bg="#4CAF50", fg="white", padx=10, pady=5).pack(pady=20)
+
+root.mainloop()
