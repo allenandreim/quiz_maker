@@ -42,5 +42,8 @@ def save_question():
     correct_answer.delete(0, tk.END)
 
     messagebox.showinfo("Saved", "Question saved succesfully.")
-    
+
+root = tk.Tk()
+root.title("Quiz Maker")
+root.geometry("400x450")
 
