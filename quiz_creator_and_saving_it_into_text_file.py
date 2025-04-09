@@ -6,3 +6,12 @@
 
 import tkinter as tk
 from tkinter import messagebox
+
+def save_question():
+    question = question_entry.get()
+    choice_a = entry_a.get()
+    choice_b = entry_b.get()
+    choice_c = entry_c.get()
+    choice_d = entry_d.get()
+
+    
