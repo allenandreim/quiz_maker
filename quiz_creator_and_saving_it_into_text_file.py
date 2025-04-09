@@ -47,3 +47,7 @@ root = tk.Tk()
 root.title("Quiz Maker")
 root.geometry("400x450")
 
+tk.Label(root, text="Enter your quiz question:").pack(pady=5)
+question_entry = tk.Entry(root, width=50)
+question_entry.pack()
+
