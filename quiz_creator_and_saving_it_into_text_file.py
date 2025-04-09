@@ -41,3 +41,6 @@ def save_question():
     entry_d.delete(0, tk.END)
     correct_answer.delete(0, tk.END)
 
+    messagebox.showinfo("Saved", "Question saved succesfully.")
+    
+
