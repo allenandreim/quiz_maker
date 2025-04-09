@@ -3,3 +3,6 @@
 # type letter of correct answer
 # write collected data into textfile
 # ask question until chose to exit
+
+import tkinter as tk
+from tkinter import messagebox
