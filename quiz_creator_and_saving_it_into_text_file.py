@@ -51,3 +51,23 @@ tk.Label(root, text="Enter your quiz question:").pack(pady=5)
 question_entry = tk.Entry(root, width=50)
 question_entry.pack()
 
+tk.Label(root, text="Choice a:").pack()
+entry_a = tk.Entry(root, width=50)
+entry_a.pack()
+
+tk.Label(root, text="Choice a:").pack()
+entry_b = tk.Entry(root, width=50)
+entry_b.pack()
+
+tk.Label(root, text="Choice a:").pack()
+entry_c = tk.Entry(root, width=50)
+entry_c.pack()
+
+tk.Label(root, text="Choice a:").pack()
+entry_d = tk.Entry(root, width=50)
+entry_d.pack()
+
+tk.Label(root, text="Correct answer (a,b,c,d):").pack(pady=5)
+correct_answer = tk.Entry(root, width=10)
+correct_answer.pack()
+
