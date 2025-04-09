@@ -55,15 +55,15 @@ tk.Label(root, text="Choice a:").pack()
 entry_a = tk.Entry(root, width=50)
 entry_a.pack()
 
-tk.Label(root, text="Choice a:").pack()
+tk.Label(root, text="Choice b:").pack()
 entry_b = tk.Entry(root, width=50)
 entry_b.pack()
 
-tk.Label(root, text="Choice a:").pack()
+tk.Label(root, text="Choice c:").pack()
 entry_c = tk.Entry(root, width=50)
 entry_c.pack()
 
-tk.Label(root, text="Choice a:").pack()
+tk.Label(root, text="Choice d:").pack()
 entry_d = tk.Entry(root, width=50)
 entry_d.pack()
 
