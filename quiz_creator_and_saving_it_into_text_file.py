@@ -21,4 +21,14 @@ def save_question():
     if answer not in ["a", "b", "c", "d"]:
         messagebox.showerror("Correct answer must be one of: a, b, c, d")
         return
+    
+    quiz_entry = (
+        f"Question: {question}\n"
+        f"a) {choice_a}\n"
+        f"b) {choice_b}\n"
+        f"c) {choice_c}\n"
+        f"d) {choice_d}\n"
+        f"Answer) {answer}\n"
+        f"---\n"
+    )
 
