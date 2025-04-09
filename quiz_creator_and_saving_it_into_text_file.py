@@ -13,5 +13,12 @@ def save_question():
     choice_b = entry_b.get()
     choice_c = entry_c.get()
     choice_d = entry_d.get()
+    answer = correct_answer.get()
 
-    
+    if not all([question, choice_a, choice_b, choice_c, choice_d, answer]):
+        messagebox.showwarning("Please fill in all fields.")
+        return
+    if answer not in ["a", "b", "c", "d"]:
+        messagebox.showerror("Correct answer must be one of: a, b, c, d")
+        return
+
