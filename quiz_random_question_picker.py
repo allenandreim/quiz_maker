@@ -66,13 +66,18 @@ class QuizApp:
 
         self.load_next_question()
 
-    def load_next_question(self):
-        self.current_question = random.choice(self.questions)
-        current_q = self.current_question
+    def check_answer(self, selected):
+        correct = self.current_question['answer']
+        if selected == correct:
+            self.feedback_label.config(text="✅ Correct!", fg="green")
+        else:
+            correct_text = self.current_question['choices'][correct]
+            self.feedback_label.config(
+                text=f"❌ Incorrect. Correct answer: {correct}) {correct_text}", fg="red"
+            )
 
-        self.question_label.config(text=current_q['question'])
-        for opt in ['a', 'b', 'c', 'd']:
-            self.buttons[opt].config(text=f"{opt}) {current_q['choices'][opt]}", state=tk.NORMAL)
+        for btn in self.buttons.values():
+            btn.config(state=tk.DISABLED)
+        self.next_button.config(state=tk.NORMAL)
 
-        self.feedback_label.config(text="")
-        self.next_button.config(state=tk.DISABLED)
+       
