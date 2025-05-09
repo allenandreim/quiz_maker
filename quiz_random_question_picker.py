@@ -24,9 +24,12 @@ def load_question(filename):
                     'c': lines[3][3],
                     'd': lines[4][3]
                 } 
-                answer = lines[5][len("Answer) "):].strip().lower()question.append({
+                answer = lines[5][len("Answer) "):].strip().lower()
+                questions.append({
                     'question': q_text,
                     'choices': choices,
                     'answer': answer
                 })
-        
+    except FileNotFoundError:
+        messagebox.showerror("Error", f"File {filename} not found." )
+        return question
