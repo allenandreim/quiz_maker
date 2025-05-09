@@ -45,3 +45,25 @@ class QuizApp:
             messagebox.showinfo("Info", "No questions available.")
             master.destroy
             return
+        
+        self.current_question = None
+
+        self.question_label = k.Label(master, text="", wraplength=480,, font=("Arial", 14))
+        self.question_label.pack(pady=20)
+
+        self.buttons = {}
+        for option in ['a', 'b', 'c', 'd']:
+            self.buttons[option] = tk.Button(
+                master, text="", width=50, command=lambda opt=option: self.check_answer(opt)
+            )
+            self.buttons[option].pack(pady=5)
+        
+        self.feedback_label = tk.Label(master, text="", font=("Arial", 12))
+        self.feedback_label.pack(pady=10)
+
+        self.next_button = tk.Button(master, text="Next Question", command=self.load_next_question, state=tk.DISABLED)
+        self.next_button.pack(pady=10)
+
+        self.load_next_question()
+    
+    def load_next_question
