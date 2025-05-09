@@ -66,6 +66,17 @@ class QuizApp:
 
         self.load_next_question()
 
+    def load_next_question(self):
+        self.current_question = random.choice(self.questions)
+        q = self.current_question
+
+        self.question_label.config(text=q['question'])
+        for opt in ['a', 'b', 'c', 'd']:
+            self.buttons[opt].config(text=f"{opt}) {q['choices'][opt]}", state=tk.NORMAL)
+
+        self.feedback_label.config(text="")
+        self.next_button.config(state=tk.DISABLED)
+
     def check_answer(self, selected):
         correct = self.current_question['answer']
         if selected == correct:
@@ -80,4 +91,8 @@ class QuizApp:
             btn.config(state=tk.DISABLED)
         self.next_button.config(state=tk.NORMAL)
 
-       
+# Run the quiz app
+if __name__ == "__main__":
+    root = tk.Tk()
+    app = QuizApp(root)
+    root.mainloop()
