@@ -33,3 +33,15 @@ def load_question(filename):
     except FileNotFoundError:
         messagebox.showerror("Error", f"File {filename} not found." )
         return question
+
+class QuizApp:
+    def __init__(self, master):
+        self.master = master 
+        master.title("Quiz Questions")
+        master.geometry("500x400")
+
+        self.question = load_question("quiz_file_gui.txt")
+        if not self.question:
+            messagebox.showinfo("Info", "No questions available.")
+            master.destroy
+            return
